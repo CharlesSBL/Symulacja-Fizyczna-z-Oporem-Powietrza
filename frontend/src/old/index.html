@@ -1,0 +1,41 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Symulacja Fizyczna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Symulacja Fizyczna z Oporem Powietrza</h1>
+<div class="container">
+    <div class="controls">
+        <h2>Parametry</h2>
+        <label for="initialVelocity">Prędkość początkowa (m/s):</label>
+        <input type="number" id="initialVelocity" value="50">
+
+        <label for="initialHeight">Wysokość początkowa (m):</label>
+        <input type="number" id="initialHeight" value="150">
+
+        <label for="mass">Masa (kg):</label>
+        <input type="number" id="mass" value="10">
+
+        <label for="shape">Kształt obiektu:</label>
+        <select id="shape">
+            <option value="sphere">Kula (C_d=0.47)</option>
+            <option value="cube">Sześcian (C_d=1.05)</option>
+        </select>
+
+        <label for="area">Pole powierzchni (m²):</label>
+        <input type="number" id="area" value="0.1">
+
+        <button id="startButton">Start Symulacji</button>
+        <div id="results"></div>
+    </div>
+    <div class="simulation-area">
+        <canvas id="simulationCanvas" width="800" height="600"></canvas>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
